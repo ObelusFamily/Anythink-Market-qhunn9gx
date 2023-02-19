@@ -29,6 +29,11 @@ const ItemPreview = (props) => {
     }
   };
 
+  function handleImageRendering (item) {
+    const placeHolderImage = "/placeholder.png"
+    return (item.image ? item.image : placeHolderImage)
+  }
+
   return (
     <div
       className="card bg-dark border-light p-3"
@@ -37,7 +42,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        src={handleImageRendering}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
