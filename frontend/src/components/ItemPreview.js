@@ -29,8 +29,6 @@ const ItemPreview = (props) => {
     }
   };
 
-const fallBackImage = "/placeholder.png"
-
   return (
     <div
       className="card bg-dark border-light p-3"
@@ -39,7 +37,7 @@ const fallBackImage = "/placeholder.png"
     >
       <img
         alt="item"
-        src={item.image || fallBackImage}
+        src={item.image}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
